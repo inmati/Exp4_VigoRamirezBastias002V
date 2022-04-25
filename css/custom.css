@@ -1,0 +1,185 @@
+.nav-s {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid;
+    border-bottom-color: #efefef;
+}
+
+.carousel-item {
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: #d0d0d0;
+}
+
+.text {
+    font-size: 95%;
+    color: #2a4060;
+}
+
+.text-background {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 50px;
+    background-color: #fafafa;
+}
+
+.nav-link {
+    font-size: 90%;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+.btn-style {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 6px;
+    padding-right: 6px;
+    border: 0.5px solid;
+    border-color: #3F5987;
+    background-color: #3F5987;
+    color: #fafafa;
+}
+
+.btn-login {
+    border: 1px solid;
+    border-color: #3F5987;
+    background-color: #fafafa;
+    color: #3F5987;
+}
+
+.nav-rigth {
+    margin-left: 1080px;
+}
+
+.main-link {
+    font-size: 90%;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    background-color: #040c9e;
+    border-bottom: 2px solid;
+    border-bottom-color: #635edf;
+    color: #efefef;
+    border-radius: 5px;
+}
+
+.thumbnail {
+    position: relative;
+}
+
+
+.caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
+    width: 100%;
+}
+
+.iimg {
+    width: 100%;
+    position: relative;
+}
+
+
+.pp {
+    position: absolute;
+    font-size: 1em;
+    top: 100px;
+}
+
+
+.treepage {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+}
+
+.treepage-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#treepagebg {
+    background-image: url("img/3.png");
+}
+
+.treepagecontent {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.treepagetext {
+    margin-top: 100px;
+}
+
+.treepagetext p {
+    margin-top: 20px;
+    color: #000;
+    font-size: 20px;
+    line-height: 10px;
+}
+
+.treepagebtn {
+    margin-top: 450px;
+    font-size: 25px;
+}
+
+.title {
+    color: white;
+    text-shadow: 1px 2px 2px black, 0 0 25px blue, 0 0 5px blue;
+    text-align: center;
+
+}
+
+div.galeria {
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 lightskyblue, 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    float: left;
+    width: 335px;
+
+}
+
+div.galeria img {
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover {
+    border: 1px solid lightcoral;
+    transform: rotate(-3deg);
+}
+
+div.pie {
+    text-align: center;
+    text-shadow: 2px 2px 5px purple;
+    padding: 10px;
+}
+
+.rrss {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+}
+
+footer {
+    padding-top: 18px;
+    margin-top: 20px;
+    background-color: #f5f5f5;
+    color: #3F5987;
+}
+
+.link-footer {
+    padding-top: 20px;
+}
+
+.newsletter-form {
+    color: #2a4060;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 1.5px solid;
+    border-color: #2a4060;
+    padding-top: 10px;
+}

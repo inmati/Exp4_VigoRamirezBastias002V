@@ -1,0 +1,11 @@
+<svg id="iniciar-sesion-icon" xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59">
+  <g id="Elipse_2" data-name="Elipse 2" fill="none" stroke="#5373aa" stroke-linejoin="round" stroke-width="2.5">
+    <circle cx="29.5" cy="29.5" r="29.5" stroke="none"/>
+    <circle cx="29.5" cy="29.5" r="28.25" fill="none"/>
+  </g>
+  <g id="Elipse_3" data-name="Elipse 3" transform="translate(21 10)" fill="none" stroke="#5373aa" stroke-linejoin="round" stroke-width="2.5">
+    <circle cx="9" cy="9" r="9" stroke="none"/>
+    <circle cx="9" cy="9" r="7.75" fill="none"/>
+  </g>
+  <path id="Trazado_7" data-name="Trazado 7" d="M-1412.92-591.8s9.78-20.335,22.936-13.011c3.255,1.806,7.034,5.865,10.907,13.011" transform="translate(1425.498 636.905)" fill="none" stroke="#5373aa" stroke-width="2.5"/>
+</svg>
