@@ -14,43 +14,52 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light mb-3" id="navbar" style="background-color: #fafafa;
-                    border-bottom: 1px solid;
-                    border-bottom-color: #efefef;
-                    ">
+        <nav class="navbar nav-s navbar-expand-lg navbar-light" id="navbar">
             <a class="navbar-brand" href="home.html">
-                <img src="img/logo.svg" width=92%>
+                <h4 class="nav-font">GardenStore</h4>
             </a>
+            <!-- enlaces -->
+            <div class="collapse navbar-collapse" id="opciones">
+                <ul class="navbar-nav ul-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <h6 class="nav-font h">Inicio</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="us.html">
+                            <h6 class="nav-font h">Nosotros</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galery.html">
+                            <h6 class="nav-font h">Galería</h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <h6 class="nav-font h"><strong>Clima</strong></h6>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <h6 class="nav-font h"><strong>Tienda</strong></h6>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button class="nav-btn">Registrarse</button> 
+                <button class="nav-btn">Iniciar sesión</button>
+            </div>
             <!--Burger button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- enlaces -->
-            <div class="collapse navbar-collapse " id="opciones">
-                <ul class="navbar-nav" style="gap:16px">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="us.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="galery.html">Galería</a>
-                    </li>
-                    <li class="nav-item">
-                        <button type="button" class="btn btn-primary btn-sm btn-style">Tienda</button>
-                    </li>
-                </ul>
-                <div class="nav-rigth">
-                    <button type="button" class="btn btn-primary btn-sm btn-login">Iniciar sesión</button>
-                </div>
-            </div>
         </nav>
     </header>
-    <br>
-    <main>
-        <div class="container-fluid">
-            <div class="row justify-content-center">
+    <main class="container-fluid" style="padding-top: 25px; padding-bottom: 100px;">
+        <div class="row justify-content-center">
                 <div class="galeria">
                     <div class="foto">
                         <img src="img/foto1.JPG" alt="">
