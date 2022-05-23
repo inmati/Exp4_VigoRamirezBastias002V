@@ -1,4 +1,4 @@
-new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'), {
+new tempusDominus.TempusDominus(document.getElementById('datetimepicker'), {
     display: {
         viewMode: 'calendar',
         buttons: {
@@ -18,6 +18,6 @@ new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'), {
         }
     },
     restrictions: {
-        daysOfWeekDisabled: [0, 6]
+        daysOfWeekDisabled: [0]
     }
 });

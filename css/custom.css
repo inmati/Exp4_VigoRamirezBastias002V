@@ -1,3 +1,6 @@
+.py-2{
+    color:#28356f
+}
 .nav-s {
     border-bottom: 1.5px solid;
     border-bottom-left-radius: 8px;
@@ -98,6 +101,8 @@
 }
 
 .my-btn {
+    width: 70%;
+    height: 110%;
     border: 1px solid;
     border-radius: 5px;
     border-color: #28356f;
@@ -106,11 +111,13 @@
 }
 
 .my-btn:hover {
-    border: 1px solid;
+    width: 70%;
+    height: 110%;
+    border: 2px solid;
     border-radius: 5px;
-    border-color: #4f4bb6;
-    background-color: #3F5987;
-    color: #ffffff;
+    border-color: #28356f;
+    background-color: #ffffff;
+    color: #28356f;
 }
 
 .nav-rigth {

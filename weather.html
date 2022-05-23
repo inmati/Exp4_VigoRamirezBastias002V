@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 
 <head>
@@ -9,7 +8,46 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/custom.css">
     <link rel="icon" href="img/logo-pestaña.svg">
-    <title>GardenStore | Galery</title>
+    <!-- JQuery -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <!--Bootstrap Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <!-- FontAwesome Kit -->
+    <script src="https://kit.fontawesome.com/6ebfb7f610.js" crossorigin="anonymous"></script>
+    <!-- Popperjs -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+    <!-- Tempus Dominus -->
+    <script src="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/js/tempus-dominus.js"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/css/tempus-dominus.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!--Call REST API script-->
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            //vamos a probar el servicio rest
+            //vamos a llamar el servicio y mostrar los elementos en la tabla de categorias'
+            //al hacer click en el boton se cargaran los datos 
+            $("#enviar").click(function () {
+                $.get("https://api.open-meteo.com/v1/forecast?latitude=-33.4691&longitude=-70.6420&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset&timezone=Asia%2FTokyo",
+                    function (daily) {
+                        // en data capturaremos todos los datos que retorne el servicio 
+                        $.each(daily, function (i, item) {
+                            $("#categorias").append
+                                ("<tr><td>" + item.temperature_2m_max[1] + "° Grados" +
+                                    "</td><td>" + item.temperature_2m_min[1] + "° Grados" +
+                                    "</td><td>" + item.sunrise["0"].substr(11) + " PM " + "" +
+                                    "</td><td>" + item.sunset["0"].substr(11) + " AM " + "</td></tr>");
+                        });
+                    });
+            });
+        })
+    </script>
+
+    <title>GardenStore</title>
 </head>
 
 <body>
@@ -37,8 +75,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
-                            <h6 class="nav-font h"><strong>Clima</strong></h6>
+                        <a class="nav-link" href="weather.html">
+                            <h6 class="nav-font h">Clima</h6>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -49,8 +87,7 @@
                 </ul>
             </div>
             <div>
-                <button class="nav-btn">Registrarse</button> 
-                <button class="nav-btn">Iniciar sesión</button>
+                <button type="submit" class="nav-btn nav-font">Iniciar sesión</button>
             </div>
             <!--Burger button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
@@ -58,77 +95,43 @@
             </button>
         </nav>
     </header>
-    <main class="container-fluid" style="padding-top: 25px; padding-bottom: 100px;">
-        <div class="row justify-content-center">
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="img/foto1.JPG" alt="">
-                    </div>
-                    <div class="pie">
-                        <p>Maceteros</p>
-                        <p>Las plantas son algo más que un elemento meramente decorativo. Nos reconcilian con
-                            nosotros mismos y con el mundo. Por su parte, las macetas y jardineras de piedra artificial
-                            cumplen la función de albergar la vida vegetal, proporcionando el espacio para el sustrato y
-                            las
-                            raíces.
-                        </p>
-                    </div>
-                </div>
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="img/foto4.JPG.opdownload" alt="">
-                    </div>
-                    <div class="pie">
-                        <p>Fertilizantes</p>
-                        <p> El uso de fertilizantes permite a los productores agrícolas obtener una mayor producción.
-                            Los
-                            fertilizantes son sustancias ricas en nutrientes que se utilizan para mejorar las
-                            características del suelo para un mayor desarrollo de los cultivos agrícolas.</p>
-                    </div>
-                </div>
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="img/foto3.JPG" alt="">
-                    </div>
-                    <div class="pie">
-                        <p>Sustratos</p>
-                        <p>La función de los sustratos de cultivo es sustituir al suelo, permitiendo el anclaje y
-                            adecuado
-                            crecimiento
-                            del sistema radicular de la planta. El suelo, factor de producción esencial en la
-                            agricultura,
-                            actúa
-                            como soporte
-                            físico de los cultivos y les proporciona los nutrientes, el aire y el agua que precisan.</p>
-                    </div>
-                </div>
-                <div class="galeria">
-                    <div class="foto">
-                        <img src="img/foto2.JPG" alt="">
-                    </div>
-                    <div class="pie">
-                        <p>Semillas</p>
-                        <p>
-                            La semilla, (También llamada simiente, pepa) es cada uno de los cuerpos que forman parte del
-                            fruto
-                            que da
-                            origen a una nueva planta; es la estructura mediante la cual realizan la propagación de las
-                            plantas
-                            que
-                            por ello se llaman espermatofitas (plantas con semilla). La semilla se produce por la
-                            maduración
-                            de
-                            un
-                            óvulo de una gimnosperma o de una angiosperma. Una semilla contiene un embrión del que puede
-                            desarrollarse una nueva planta bajo condiciones apropiadas.
-                        </p>
-                    </div>
-                </div>
+    <main class="container-fluid" style="padding-top: 20px;">
+        <div class="container">
+            <div class="row">
+                <h1>PREVIENE QUE TUS PLANTAS SUFRAN!!</h1>
             </div>
+            <div class="row">
+                <hr>
+                <h2> cuidalas del clima</h2>
+            </div>
+            <div class="row">
+                <h3>Revisemos como estara el tiempo</h3>
+            </div>
+            <div class="row">
+                <button type="button" class="btn btn-primary" id="enviar">VER TIEMPO</button>
+            </div>
+            <div class="row">
+                <table class="table" id="categorias">
+                    <thead>
+                        <tr>
+                            <th scope="col">Temperarura maxima</th>
+                            <th scope="col">Temperatura minima</th>
+                            <th scope="col">Hora puesta sol</th>
+                            <th scope="col">Hora salida sol</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
         </div>
     </main>
     <footer>
-        <div class="row col-12">
+        <div class="row col-12" style="height:200px">
             <div class="col-lg-2">
                 <img src="img/logo.svg" alt="GardenStore" Style="width: 75%; padding-left:45px">
             </div>
@@ -181,13 +184,10 @@
             <p>&copy; Matias Vigo - Víctor Bastías @Copyright Derechos Reservados</p>
         </div>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="js/tempus.dominus.config.js"></script>
+    <script src="js/take-appointment.js"></script>
+    <script src="js/validation.js"></script>
+
 </body>
+
+</html>

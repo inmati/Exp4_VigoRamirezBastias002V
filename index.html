@@ -10,6 +10,7 @@
     <link rel="icon" href="img/logo-pestaña.svg">
     <!-- JQuery -->
     <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <!-- FontAwesome Kit -->
@@ -51,7 +52,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="weather.html">
                             <h6 class="nav-font h">Clima</h6>
                         </a>
                     </li>
@@ -63,8 +64,6 @@
                 </ul>
             </div>
             <div>
-                <a href="register.html">
-                    <button type="submit" class="nav-btn nav-font">Registrarse</button></a>
                 <button type="submit" class="nav-btn nav-font">Iniciar sesión</button>
             </div>
             <!--Burger button-->
@@ -117,57 +116,93 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-start" style=" margin-left:5%;padding-top: 4%;padding-bottom: 50px; gap:130px;">
+        <div class="row justify-content-center mt-4">
             <div class="col-5">
-                <img src="img/contact.gif" style="width: 100%;">
+                <img src="img/contact.gif" style="width: 80%;">
             </div>
-            <div class="col-4 purple-card" style="height:400px">
-                <!--This is the tempus dominus section -->
-                <h3 class="nav-font">Pide tu hora</h3>
-                <p>
-                    Si tienes un proyecto en mente y no sabes como empezar, no dudes en consultarlo con nosotros,
-                    asesoramos todo tipo de proyectos, grande, mediano o pequeño.
-                </p>
-                <section class="container">
-                    <form class="row" id="date" style="margin-bottom: 26px;">
-                        <div class="input-group" id="datetimepicker1" data-td-target-input="nearest"
-                            data-td-target-toggle="nearest">
-                            <input id="datetimepicker1Input" type='text' class="form-control"
-                                data-td-target="#datetimepicker1" data-td-toggle="datetimepicker" placeholder="Fecha"
-                                readonly />
-                        </div>
-                    </form>
-                </section>
-                <section class="container">
-                    <form class="row" id="contact" style="gap: 26px;">
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="name" name="nombre" placeholder="Nombre"
-                                required />
-                            <input type="text" class="form-control" id="last-name" name="apellidos"
-                                placeholder="Apellidos" required />
-                        </div>
-                        <div class="input-group">
-                            <input type="text" class="form-control" id="phone" name="fono" placeholder="+56"
-                                minlength="9" required />
-                            <input type="email" class="form-control" id="email" name="email"
-                                placeholder="Example@example.com" required />
-                        </div>
-                        <a href="#anchor"><button type="button" id="take-appointment" class="nav-btn-xl">Agendar
-                                hora</button></a>
-                    </form>
-                </section>
+            <div class="col-5 mt-4">
+                <form class="row g-3" style="border: 1px solid; border-radius:5px; border-color: #28356f; ">
+                    <div class="col-12">
+                        <h3 class="py-2" style="color: #28356f;">Crea tu cuenta</h3>
+                        <h6 class="py-2" style="color: #28356f;">Crea una cuenta con nosotros y podrás llevar registro
+                            de
+                            todas <br> tus compras,
+                            horas agendadas, consultas realizadas, seguimiento de proyectos, etcétera.</h6>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <input type="text" class="form-control" placeholder="Apellido" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="email" class="form-control" placeholder="Correo" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Dirección" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="text" class="form-control" placeholder="Celular" minlength="9" required>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre de usuario" minlength="8" required>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <input id="password" type="text" class="form-control" placeholder="Contraseña" required>
+                    </div>
+                    <div class="col-4 mb-3">
+                        <input id="password-confirm type=" text" class="form-control" placeholder="Confirme contraseña"
+                            required>
+                    </div>
+                    <div class="col-4 mb-4">
+                        <button type="submit" class="my-btn" id="register-btn">Registrarse<i
+                                class="fa-solid fa-clipboard-check" style="margin-left: 5%;"></i></button>
+                    </div>
+                </form>
             </div>
-
         </div>
-        <div class="row justify-content-center" id="anchor">
-            <div class="col-6 purple-card" id="card">
-                <h3 class="nav-font">Cita agendada</h3>
-                <br>
-                <h6 class="nav-font">Nombre</h6>
-                <h6 class="nav-font">Email</h6>
-                <h6 class="nav-font">Fecha</h6>
-                <br>
-                <p class="nav-font"><strong>Te llamaremos un día antes para confirmar hora.</strong></p>
+        <div class="row justify-content-center mt-4" style="gap:2%">
+            <div class="col-5 mt-4">
+                <form id="pide-tu-hora" class="row g-3" style="border: 1px solid; border-radius:5px; border-color: #28356f;">
+                    <div class="col-12">
+                        <h3 class="py-2">Pide tu hora</h3>
+                        <h6 class="py-2">Si tienes un proyecto y no sabes como empezar, no dudes en consultarlo
+                            con nosotros. <br> Asesoramos todo tipo de proyectos, sea de pequeña, mediana o gran escala
+                        </h6>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
+                    </div>
+                    <div class="col-sm mb-3">
+                        <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Correo" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="text" id="direccion" name="direccion"class="form-control" placeholder="Dirección" required>
+                    </div>
+                    <div class="col-6 mb-3">
+                        <input type="text" id="cel" name="fono" class="form-control" placeholder="Celular" required minlength="9">
+                    </div>
+                    <div class="col-12 mb-3" id="datetimepicker" data-td-target-input="nearest"
+                        data-td-target-toggle="nearest">
+                        <input id="datetimepicker1Input" type='text' class="form-control"
+                            data-td-target="#datetimepicker1" data-td-toggle="datetimepicker" placeholder="Date"
+                            readonly />
+                    </div>
+                    <div class="col-4 mb-4">
+                        <button type="button" class="my-btn" id="appointment-btn"><i
+                                class="fa fa-calendar"></i></button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4" id="card" style="margin-top: 2.5%;border: 1px solid; border-radius:5px; border-color: #28356f; height: 300px;">
+                <h3 class="py-2">Cita agendada</h3>
+                <h6 id="card-name" class="py-2">Nombre</h6>
+                <h6 id="card-email" class="py-2">Correo</h6>
+                <h6 id="card-date" class="py-2">Fecha</h6>
+                <p class="py-2">Te llamaremos un día antes para confirmar hora.</p>
             </div>
         </div>
     </main>
@@ -222,12 +257,12 @@
             </div>
         </div>
         <div class="row col-12 justify-content-center">
-            <p>&copy; Developed by Matias Vigo - Matias Ramirez - Víctor Bastías - 2022</p>
+            <p>&copy; Matias Vigo - Víctor Bastías @Copyright Derechos Reservados</p>
         </div>
     </footer>
     <script src="js/tempus.dominus.config.js"></script>
-    <script src="js/take.appointment.js"></script>
-    <script src="js/validaciones.js"></script>
+    <script src="js/take-appointment.js"></script>
+    <script src="js/validation.js"></script>
 
 </body>
 
