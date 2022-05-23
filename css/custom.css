@@ -77,12 +77,10 @@
 }
 
 .nav-btn-xl {
-    width: 100px;
+    width: 135px;
+    height: 35px;
     border-radius: 6px;
     padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 6px;
-    padding-right: 6px;
     border: 1px solid;
     border-color: #ffffff;
     background-color: #28356f;
@@ -90,13 +88,12 @@
 }
 
 .nav-btn-xl:hover {
+    width: 135px;
+    height: 35px;
     border-radius: 6px;
     padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 6px;
-    padding-right: 6px;
     border: 2px solid;
-    background-color:#28356f;
+    background-color: #28356f;
     color: #ffffff;
 }
 
@@ -236,6 +233,7 @@ div.pie {
 
 footer {
     padding-top: 18px;
+    margin-top: 100px;
     background-color: #28356f;
     color: #ffffff;
 }
@@ -273,16 +271,14 @@ footer {
 
 .box-cont {
     margin: 1%;
-    padding: 1%;
+    padding: 4%;
     width: 48%;
     height: 41%;
     color: #000000;
 }
 
 .box-cont-xl {
-    border: 1px solid;
     border-radius: 5px;
-    border-color:#28356f;
     margin: 1%;
     padding: 3%;
     width: 68%;
