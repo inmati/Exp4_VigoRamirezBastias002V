@@ -121,7 +121,8 @@
                 <img src="img/contact.gif" style="width: 80%;">
             </div>
             <div class="col-5 mt-4">
-                <form class="row g-3" style="border: 1px solid; border-radius:5px; border-color: #28356f; ">
+                <form id="registrate" class="row g-3"
+                    style="border: 1px solid; border-radius:5px; border-color: #28356f; ">
                     <div class="col-12">
                         <h3 class="py-2" style="color: #28356f;">Crea tu cuenta</h3>
                         <h6 class="py-2" style="color: #28356f;">Crea una cuenta con nosotros y podrás llevar registro
@@ -130,29 +131,30 @@
                             horas agendadas, consultas realizadas, seguimiento de proyectos, etcétera.</h6>
                     </div>
                     <div class="col-sm mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre" required>
+                        <input name="nombre" type="text" class="form-control" placeholder="Nombre" required>
                     </div>
                     <div class="col-sm mb-3">
-                        <input type="text" class="form-control" placeholder="Apellido" required>
+                        <input name="apellido" type="text" class="form-control" placeholder="Apellido" required>
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="email" class="form-control" placeholder="Correo" required>
+                        <input name="email" type="email" class="form-control" placeholder="Correo" required>
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Dirección" required>
+                        <input name="direccion" type="text" class="form-control" placeholder="Dirección" required>
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="text" class="form-control" placeholder="Celular" minlength="9" required>
+                        <input name="fono" type="text" class="form-control" placeholder="Celular" minlength="9" required>
                     </div>
                     <div class="col-4 mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre de usuario" minlength="8" required>
+                        <input name ="username" type="text" class="form-control" placeholder="Nombre de usuario" required>
                     </div>
                     <div class="col-4 mb-3">
-                        <input id="password" type="text" class="form-control" placeholder="Contraseña" required>
+                        <input id="pass" name="password" type="password" class="form-control" placeholder="Contraseña"
+                            minlength="8" required>
                     </div>
                     <div class="col-4 mb-3">
-                        <input id="password-confirm type=" text" class="form-control" placeholder="Confirme contraseña"
-                            required>
+                        <input id="pass2" name="password2" type="password" class="form-control"
+                            placeholder="Confirme contraseña" required>
                     </div>
                     <div class="col-4 mb-4">
                         <button type="submit" class="my-btn" id="register-btn">Registrarse<i
@@ -161,9 +163,10 @@
                 </form>
             </div>
         </div>
-        <div class="row justify-content-center mt-4" style="gap:2%">
-            <div class="col-5 mt-4">
-                <form id="pide-tu-hora" class="row g-3" style="border: 1px solid; border-radius:5px; border-color: #28356f;">
+        <div class="row justify-content-start mt-4" style="gap:7%">
+            <div class="col-5 mt-4" style="margin-left:100px;">
+                <form id="pide-tu-hora" class="row g-3"
+                    style="border: 1px solid; border-radius:5px; border-color: #28356f;">
                     <div class="col-12">
                         <h3 class="py-2">Pide tu hora</h3>
                         <h6 class="py-2">Si tienes un proyecto y no sabes como empezar, no dudes en consultarlo
@@ -174,16 +177,19 @@
                         <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre" required>
                     </div>
                     <div class="col-sm mb-3">
-                        <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido" required>
+                        <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellido"
+                            required>
                     </div>
                     <div class="col-6 mb-3">
                         <input type="email" id="email" name="email" class="form-control" placeholder="Correo" required>
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="text" id="direccion" name="direccion"class="form-control" placeholder="Dirección" required>
+                        <input type="text" id="direccion" name="direccion" class="form-control" placeholder="Dirección"
+                            required>
                     </div>
                     <div class="col-6 mb-3">
-                        <input type="text" id="cel" name="fono" class="form-control" placeholder="Celular" required minlength="9">
+                        <input type="text" id="cel" name="fono" class="form-control" placeholder="Celular" required
+                            minlength="9">
                     </div>
                     <div class="col-12 mb-3" id="datetimepicker" data-td-target-input="nearest"
                         data-td-target-toggle="nearest">
@@ -197,12 +203,13 @@
                     </div>
                 </form>
             </div>
-            <div class="col-4" id="card" style="margin-top: 2.5%;border: 1px solid; border-radius:5px; border-color: #28356f; height: 300px;">
+            <div class="col-4" id="card"
+                style="margin-top: 2.5%;border: 1px solid; border-radius:5px; border-color: #28356f; height: 300px;">
                 <h3 class="py-2">Cita agendada</h3>
                 <h6 id="card-name" class="py-2">Nombre</h6>
                 <h6 id="card-email" class="py-2">Correo</h6>
                 <h6 id="card-date" class="py-2">Fecha</h6>
-                <p class="py-2">Te llamaremos un día antes para confirmar hora.</p>
+                <p class="py-2">Te llamaremos un día antes para confirmar la hora.</p>
             </div>
         </div>
     </main>
@@ -263,6 +270,7 @@
     <script src="js/tempus.dominus.config.js"></script>
     <script src="js/take-appointment.js"></script>
     <script src="js/validation.js"></script>
+    <script src="js/confirm.password.js"></script>
 
 </body>
 

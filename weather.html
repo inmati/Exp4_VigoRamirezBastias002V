@@ -37,8 +37,8 @@
                         // en data capturaremos todos los datos que retorne el servicio 
                         $.each(daily, function (i, item) {
                             $("#categorias").append
-                                ("<tr><td>" + item.temperature_2m_max[1] + "° Grados" +
-                                    "</td><td>" + item.temperature_2m_min[1] + "° Grados" +
+                                ("<tr><td>" + "Entre " + item.temperature_2m_max[6] + " y " + item.temperature_2m_max[0] + "° Grados" +
+                                    "</td><td>" + "Entre " + item.temperature_2m_min[6] + " y " + item.temperature_2m_min[0] + "° Grados" +
                                     "</td><td>" + item.sunrise["0"].substr(11) + " PM " + "" +
                                     "</td><td>" + item.sunset["0"].substr(11) + " AM " + "</td></tr>");
                         });
@@ -98,19 +98,20 @@
     <main class="container-fluid" style="padding-top: 20px;">
         <div class="container">
             <div class="row">
-                <h1>PREVIENE QUE TUS PLANTAS SUFRAN!!</h1>
+                <h1 class="py-2">PREVIENE QUE TUS PLANTAS SUFRAN!!</h1>
             </div>
             <div class="row">
-                <hr>
-                <h2> cuidalas del clima</h2>
+                <h2 class="py-2">Cuidalas del mal clima</h2>
             </div>
             <div class="row">
-                <h3>Revisemos como estara el tiempo</h3>
+                <h5 class="py-2">Revisemos como estara el tiempo</h5>
             </div>
-            <div class="row">
-                <button type="button" class="btn btn-primary" id="enviar">VER TIEMPO</button>
+            <div class="row justifiy-content-start">
+                <div class="col-3">
+                    <button type="button" class="my-btn" id="enviar">VER TIEMPO</button>
+                </div>
             </div>
-            <div class="row">
+            <div class="row mt-4">
                 <table class="table" id="categorias">
                     <thead>
                         <tr>
@@ -126,8 +127,6 @@
 
                 </table>
             </div>
-
-
         </div>
     </main>
     <footer>
