@@ -223,7 +223,7 @@ div.galeria img {
 
 div.galeria:hover {
     border: 1px solid lightcoral;
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
 }
 
 div.pie {

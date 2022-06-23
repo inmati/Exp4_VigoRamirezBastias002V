@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -6,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/custom.css">
-    <link rel="icon" href="img/logo-pestaña.svg">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/custom.css' %}">
+    <link rel="icon" href="{% static 'img/logo-pestaña.svg' %}">
     <!-- JQuery -->
-    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -23,6 +24,8 @@
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/gh/Eonasdan/tempus-dominus@master/dist/css/tempus-dominus.css" rel="stylesheet"
         crossorigin="anonymous">
+
+    <title>GardenStore</title>
 
     <!--Call REST API script-->
     <script type="text/javascript">
@@ -53,41 +56,41 @@
 <body>
     <header>
         <nav class="navbar nav-s navbar-expand-lg navbar-light" id="navbar">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="{% url 'home' %}">
                 <h4 class="nav-font">GardenStore</h4>
             </a>
             <!-- enlaces -->
             <div class="collapse navbar-collapse" id="opciones">
                 <ul class="navbar-nav ul-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="{% url 'home' %}">
                             <h6 class="nav-font h">Inicio</h6>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="us.html">
+                        <a class="nav-link" href="{% url 'us'%}">
                             <h6 class="nav-font h">Nosotros</h6>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="galery.html">
+                        <a class="nav-link" href="{% url 'galery' %}">
                             <h6 class="nav-font h">Galería</h6>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="weather.html">
+                        <a class="nav-link" href="{% url 'weather' %}">
                             <h6 class="nav-font h">Clima</h6>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="{% url 'home' %}">
                             <h6 class="nav-font h"><strong>Tienda</strong></h6>
                         </a>
                     </li>
                 </ul>
             </div>
             <div>
-                <button type="submit" class="nav-btn nav-font">Iniciar sesión</button>
+                <button type="button" class="nav-btn nav-font">Iniciar sesión</button>
             </div>
             <!--Burger button-->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#opciones">
@@ -132,7 +135,7 @@
     <footer>
         <div class="row col-12" style="height:200px">
             <div class="col-lg-2">
-                <img src="img/logo.svg" alt="GardenStore" Style="width: 75%; padding-left:45px">
+                <img src="{% static 'img/logo.svg'%}" alt="GardenStore" Style="width: 75%; padding-left:45px">
             </div>
             <div class="col-lg-1">
                 <a href="index.html" id="linkFooter"><strong>INICIO</strong></a>
@@ -151,28 +154,28 @@
                 <br><br>
                 <div class="row">
                     <a title="facebook" href="https://www.facebook.com/" target="_blank"><img class="rrss"
-                            src="img/facebook.svg" alt="facebook"></a>
+                            src="{% static 'img/facebook.svg' %}" alt="facebook"></a>
                     <a title="youtube" href="https://www.youtube.com/" target="_blank"><img class="rrss"
-                            src="img/youtube.svg" alt="youtube"></a>
+                            src="{% static 'img/youtube.svg' %}" alt="youtube"></a>
                     <a title="instagram" href="https://www.instagram.com/" target="_blank"><img class="rrss"
-                            src="img/instagram.svg" alt="instagram"></a>
+                            src="{% static 'img/instagram.svg' %}" alt="instagram"></a>
                 </div>
             </div>
             <div class="col-lg-3">
                 <strong>Contacto</strong>
                 <br><br>
                 <div class="row">
-                    <img src="img/location.png" alt="" width="20px" height="20px"
+                    <img src="{% static 'img/location.png'%}" alt="" width="20px" height="20px"
                         style="margin-right: 10px; margin-left: 15px;">
                     <p>Av. Esq. Blanca 501, Maipú</p>
                 </div>
                 <div class="row">
-                    <img src="img/fono.png" alt="" width="20px" height="20px"
+                    <img src="{% static 'img/fono.png'%}" alt="" width="20px" height="20px"
                         style="margin-right: 10px; margin-left: 15px;">
                     <p>275864000</p>
                 </div>
                 <div class="row">
-                    <img src="img/email.png" alt="" width="20px" height="20px"
+                    <img src="{% static 'img/email.png'%}" alt="" width="20px" height="20px"
                         style="margin-right: 10px; margin-left: 15px;">
                     <p>consulta@gardenstore.cl</p>
                 </div>
