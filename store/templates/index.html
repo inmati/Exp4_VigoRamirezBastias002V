@@ -215,7 +215,7 @@
                             required>
                     </div>
                     <div class="col-4 mb-4 mt-1">
-                        <button type="submit" class="my-btn" id="get-appointment-btn">
+                        <button type="button" class="my-btn" id="get-appointment-btn">
                             <i class="fa-solid fa-clipboard-question"></i>
                         </button>                    
                     </div>
@@ -231,7 +231,7 @@
                             required>
                     </div>
                     <div class="col-4 mb-4 mt-1">
-                        <button type="submit" class="my-btn" id="delete-appointment-btn">
+                        <button type="button" class="my-btn" id="delete-appointment-btn">
                             <i class="fa-solid fa-calendar-xmark"></i>
                         </button>                    
                     </div>
@@ -247,10 +247,10 @@
                             minlength="9">
                     </div>
                     <div class="col-4 mb-3">
-                        <input id="date" name="fecha3" type='date' class="form-control">
+                        <input id="date1" name="fecha3" type='date' class="form-control">
                     </div>
                     <div class="col-4 mb-4 mt-1">
-                        <button type="submit" class="my-btn" id="update-appointment-btn">
+                        <button type="button" class="my-btn" id="update-appointment-btn">
                             <i class="fa-solid fa-file-pen"></i>
                         </button>
                     </div>
@@ -312,8 +312,12 @@
             <p>&copy; Matias Vigo - Víctor Bastías @Copyright Derechos Reservados</p>
         </div>
     </footer>
-    <script src="{% static 'js/take-appointment.js' %}"></script>
     <script src="{% static 'js/validation.js' %}"></script>
+    <script src="{% static 'js/create-appointment.js' %}"></script>
+    <script src="{% static 'js/read-appointment.js' %}"></script>
+    <script src="{% static 'js/update-appointment.js' %}"></script>
+    <script src="{% static 'js/delete-appointment.js' %}"></script>
+
 </body>
 
 </html>
