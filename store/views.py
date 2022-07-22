@@ -1,4 +1,3 @@
-from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -136,7 +135,7 @@ def deleteAppointment(request):
 # y llamar al procedimiento cada vez que se ejecute una función crud.
 
 
-######################################################### REST API ########
+######################################################################################################################### REST API ########
 
 # LAS SIGUIENTES FUNCIONES TIENEN LA MISMA LÓGICA QUE LAS DE ARRIBA, PERO EN ESTE CASO SE GENERAN RESPUESTAS EN FORMATO JSON
 # ESTA SECCIÓN PUEDE SER TESTEADA EN POSTMAN O THUNDER CLIENT (VISUAL ESTUDIO CODE EXTENSION)
